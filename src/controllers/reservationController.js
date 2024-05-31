@@ -25,13 +25,27 @@ exports.getAllByEvent = (req, res) => {
 
 // Funzione di utilità per creare una nuova prenotazione
 const createReservation = (eventId, firstName, lastName, email) => {
+    const event = getEventById(eventId);
+    if (!event) {
+        throw new Error('Evento non trovato.');
+    }
+
+    const currentDate = new Date();
+    const eventDate = new Date(event.date);
+
+    if (eventDate < currentDate) {
+        throw new Error('Impossibile prenotare per un evento passato.');
+    }
+
     const reservations = getReservationsByEventId(eventId);
     if (reservations.length >= event.maxSeats) {
         throw new Error('Non ci sono posti disponibili per questo evento.');
     }
+
     const newReservation = new Reservation(Reservation.generateId(), eventId, firstName, lastName, email);
     Reservation.saveReservation(newReservation);
 };
+
 
 // Gestione della creazione di una nuova prenotazione
 exports.create = (req, res) => {

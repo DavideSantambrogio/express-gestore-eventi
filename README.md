@@ -47,7 +47,7 @@ Il nostro obiettivo sarà quello di creare le api per un applicazione che gestir
 - []  Creare degli errori personalizzati estendendo la classe Error.
 
 ### Bonus 5
-- []  Non permettiamo di aggiungere o togliere una prenotazione per un evento già passato
+- [x]  Non permettiamo di aggiungere o togliere una prenotazione per un evento già passato
 
 ### Bonus 6
-- []  Non permettiamo di aggiungere una prenotazione ad evento senza più posti disponibili.
+- [x]  Non permettiamo di aggiungere una prenotazione ad evento senza più posti disponibili.
