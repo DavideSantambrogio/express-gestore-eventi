@@ -41,7 +41,7 @@ Il nostro obiettivo sarà quello di creare le api per un applicazione che gestir
 - [x] Nel model degli eventi, prevediamo una funzione per recuperare tutte le prenotazioni associate
 
 ### Bonus 3
-- []  Creiamo dei setter per ogni proprietà dei nostri model ed implementiamo una validazione dei dati ricevuti. Nel caso, lanciamo un errore
+- [x]  Creiamo dei setter per ogni proprietà dei nostri model ed implementiamo una validazione dei dati ricevuti. Nel caso, lanciamo un errore
 
 ### Bonus 4
 - []  Creare degli errori personalizzati estendendo la classe Error.
