@@ -22,7 +22,7 @@ Il nostro obiettivo sarà quello di creare le api per un applicazione che gestir
 - [x] Prevediamo la possibilità di passare dei filtri tramite query string alla rotta index.
 
 # Milestone 4
-- [] Gestiamo eventuali errori 404 e 500 tramite dei middleware dedicati.
+- [x] Gestiamo eventuali errori 404 e 500 tramite dei middleware dedicati.
 
 # Bonus
 ### Bonus 1

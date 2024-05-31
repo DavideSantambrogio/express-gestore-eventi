@@ -1,5 +1,7 @@
 const express = require('express');
 const dotenv = require('dotenv');
+const notFoundMiddleware = require('./src/middlewares/notFound');
+const internalServerErrorMiddleware = require('./src/middlewares/internalServerError');
 
 // Configurazione variabili ambiente
 dotenv.config();
@@ -22,6 +24,12 @@ app.get('/favicon.ico', (req, res) => {
 // Importa e usa le route per gli eventi
 const eventRoutes = require('./src/routes/eventRoutes');
 app.use('/events', eventRoutes);  // Questa riga collega le rotte degli eventi
+
+// Middleware per gestire l'errore 404 (Not Found)
+app.use(notFoundMiddleware);
+
+// Middleware per gestire l'errore 500 (Internal Server Error)
+app.use(internalServerErrorMiddleware);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
