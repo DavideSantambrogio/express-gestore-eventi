@@ -2,13 +2,13 @@
 Il nostro obiettivo sarà quello di creare le api per un applicazione che gestirà degli eventi con le relative prenotazioni. Proseguiamo per milestone in modo da avere tutto sotto controllo.
  
 #  Milestone 1
-- [] Creiamo le seguenti rotte con relativo controller e router senza implementare le funzioni del controller.
-- [] [GET] events/ (index)
-- [] [POST] events/ (store)
-- [] [PUT] events/:event (update)
+**Creiamo le seguenti rotte con relativo controller e router senza implementare le funzioni del controller.**
+- [x] [GET] events/ (index)
+- [x] [POST] events/ (store)
+- [x] [PUT] events/:event (update)
 
 # Milestone 2
-- [] Creiamo il model models/event.js e prevediamo le seguenti proprietà:
+**Creiamo il model models/event.js e prevediamo le seguenti proprietà:**
 - [] id
 - [] title
 - [] description
@@ -25,13 +25,13 @@ Il nostro obiettivo sarà quello di creare le api per un applicazione che gestir
 
 # Bonus
 ### Bonus 1
-- []  Creiamo le seguenti rotte per gestire le prenotazioni
+**Creiamo le seguenti rotte per gestire le prenotazioni**
 - [] [GET] events/:event/reservations (index)
 - [] [POST] events/:event/reservations (store)
 - [] [DELETE] events/:event/reservations/:reservation (destroy)
 
 ### Bonus 2
-- []  Creiamo il model models/reservation.js e prevediamo le seguenti proprietà
+**Creiamo il model models/reservation.js e prevediamo le seguenti proprietà**
 - [] id
 - [] firstName
 - [] lastName
