@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "title": "Conferenza sulle tecnologie web",
+    "description": "Una conferenza informativa sulle ultime tecnologie web.",
+    "date": "2024-06-15",
+    "maxSeats": 100
+  },
+  {
+    "id": 2,
+    "title": "Workshop di sviluppo mobile",
+    "description": "Un workshop pratico per imparare a sviluppare app mobile.",
+    "date": "2024-07-10",
+    "maxSeats": 50
+  },
+  {
+    "id": 3,
+    "title": "Evento aggiunto con postman",
+    "description": "Una conferenza informativa su postman",
+    "date": "2024-08-25",
+    "maxSeats": 20
+  },
+  {
+    "id": 4,
+    "title": "Event aggiunto con postman con id dinamico",
+    "description": "Una conferenza informativa su postman",
+    "date": "2024-08-25",
+    "maxSeats": 20
+  },
+  {
+    "id": 5,
+    "title": "Event aggiunto con postman con id dinamico test2",
+    "description": "Una conferenza informativa su postman",
+    "date": "2024-08-25",
+    "maxSeats": 20
+  },
+  {
+    "id": 6,
+    "title": "Event modificato con postman",
+    "description": "Una conferenza informativa su postman",
+    "date": "2024-08-25",
+    "maxSeats": 20
+  },
+  {
+    "id": 7,
+    "title": "Event modificato con postman test2",
+    "description": "Una conferenza informativa su postman",
+    "date": "2024-08-25",
+    "maxSeats": 20
+  }
+]

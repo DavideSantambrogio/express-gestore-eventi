@@ -1,14 +1,43 @@
-exports.index = (req, res) => {
-    // Funzione per ottenere la lista degli eventi
-    res.send('Lista degli eventi');
+const Event = require('../models/eventModel');
+
+// Gestione della creazione di un nuovo evento
+exports.create = (req, res) => {
+    const { id, title, description, date, maxSeats } = req.body;
+    const newEvent = new Event(id, title, description, date, maxSeats);
+    const success = Event.saveEvent(newEvent);
+    if (success) {
+        res.status(201).send('Evento creato con successo.');
+    } else {
+        res.status(500).send('Si è verificato un errore durante la creazione dell\'evento.');
+    }
 };
 
-exports.store = (req, res) => {
-    // Funzione per creare un nuovo evento
-    res.send('Evento creato');
+// Gestione della lettura di tutti gli eventi
+exports.getAll = (req, res) => {
+    const allEvents = Event.getAllEvents();
+    res.status(200).json(allEvents);
 };
 
+// Gestione dell'aggiornamento di un evento esistente
 exports.update = (req, res) => {
-    // Funzione per aggiornare un evento esistente
-    res.send('Evento aggiornato');
+    const eventId = parseInt(req.params.event);
+    const { title, description, date, maxSeats } = req.body;
+    const updatedEvent = new Event(eventId, title, description, date, maxSeats);
+    const success = Event.updateEvent(eventId, updatedEvent);
+    if (success) {
+        res.status(200).send('Evento aggiornato con successo.');
+    } else {
+        res.status(404).send('Evento non trovato o errore durante l\'aggiornamento.');
+    }
+};
+
+// Gestione dell'eliminazione di un evento esistente
+exports.delete = (req, res) => {
+    const eventId = req.params.event;
+    const success = Event.deleteEvent(eventId);
+    if (success) {
+        res.status(200).send('Evento eliminato con successo.');
+    } else {
+        res.status(404).send('Evento non trovato o errore durante l\'eliminazione.');
+    }
 };
