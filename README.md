@@ -27,18 +27,18 @@ Il nostro obiettivo sarà quello di creare le api per un applicazione che gestir
 # Bonus
 ### Bonus 1
 **Creiamo le seguenti rotte per gestire le prenotazioni**
-- [] [GET] events/:event/reservations (index)
-- [] [POST] events/:event/reservations (store)
-- [] [DELETE] events/:event/reservations/:reservation (destroy)
+- [x] [GET] events/:event/reservations (index)
+- [x] [POST] events/:event/reservations (store)
+- [x] [DELETE] events/:event/reservations/:reservation (destroy)
 
 ### Bonus 2
 **Creiamo il model models/reservation.js e prevediamo le seguenti proprietà**
-- [] id
-- [] firstName
-- [] lastName
-- [] email
-- [] eventId
-- []  Nel model degli eventi, prevediamo una funzione per recuperare tutte le prenotazioni associate
+- [x] id
+- [x] firstName
+- [x] lastName
+- [x] email
+- [x] eventId
+- [x] Nel model degli eventi, prevediamo una funzione per recuperare tutte le prenotazioni associate
 
 ### Bonus 3
 - []  Creiamo dei setter per ogni proprietà dei nostri model ed implementiamo una validazione dei dati ricevuti. Nel caso, lanciamo un errore

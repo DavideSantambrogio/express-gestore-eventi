@@ -23,7 +23,9 @@ app.get('/favicon.ico', (req, res) => {
 
 // Importa e usa le route per gli eventi
 const eventRoutes = require('./src/routes/eventRoutes');
-app.use('/events', eventRoutes);  // Questa riga collega le rotte degli eventi
+const reservationRoutes = require('./src/routes/reservationRoutes');
+app.use('/events', eventRoutes);  // Rotte per gli eventi
+app.use('/events', reservationRoutes);  // Rotte per le prenotazioni
 
 // Middleware per gestire l'errore 404 (Not Found)
 app.use(notFoundMiddleware);
