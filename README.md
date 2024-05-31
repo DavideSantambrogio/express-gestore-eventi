@@ -18,8 +18,8 @@ Il nostro obiettivo sarà quello di creare le api per un applicazione che gestir
 - [x] Un’istanza della classe rappresenterà un singolo evento.
 
 # Milestone 3
-- [] Usiamo il model nelle funzioni scritte nei controller e facciamo in modo che tramite dei metodi statici del model possiamo recuperare uno (tramite id) o tutti gli eventi.
-- [] Prevediamo la possibilità di passare dei filtri tramite query string alla rotta index.
+- [x] Usiamo il model nelle funzioni scritte nei controller e facciamo in modo che tramite dei metodi statici del model possiamo recuperare uno (tramite id) o tutti gli eventi.
+- [x] Prevediamo la possibilità di passare dei filtri tramite query string alla rotta index.
 
 # Milestone 4
 - [] Gestiamo eventuali errori 404 e 500 tramite dei middleware dedicati.

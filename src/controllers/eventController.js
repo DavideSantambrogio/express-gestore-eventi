@@ -12,9 +12,10 @@ exports.create = (req, res) => {
     }
 };
 
-// Gestione della lettura di tutti gli eventi
+// Gestione della lettura di tutti gli eventi con filtri opzionali
 exports.getAll = (req, res) => {
-    const allEvents = Event.getAllEvents();
+    const filters = req.query; // Ottieni i filtri dalla query string
+    const allEvents = Event.getEvents(filters);
     res.status(200).json(allEvents);
 };
 
@@ -41,3 +42,4 @@ exports.delete = (req, res) => {
         res.status(404).send('Evento non trovato o errore durante l\'eliminazione.');
     }
 };
+

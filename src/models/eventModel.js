@@ -76,6 +76,45 @@ class Event {
             return false;
         }
     }
+
+    static getEventById(eventId) {
+        try {
+            const events = Event.getAllEvents();
+            return events.find(event => event.id === eventId);
+        } catch (error) {
+            return null;
+        }
+    }
+
+    // Metodo statico per recuperare tutti gli eventi con filtri opzionali
+    static getEvents(filters = {}) {
+        try {
+            const events = Event.getAllEvents();
+
+            // Converti i valori dei filtri in stringhe altrimenti postman non funziona correttamente 
+            const stringifiedFilters = {};
+            for (const key in filters) {
+                stringifiedFilters[key] = filters[key].toString();
+            }
+
+            // Applica i filtri, se presenti
+            if (Object.keys(stringifiedFilters).length > 0) {
+                return events.filter(event => {
+                    for (const key in stringifiedFilters) {
+                        if (event[key].toString() !== stringifiedFilters[key]) {
+                            return false;
+                        }
+                    }
+                    return true;
+                });
+            }
+
+            return events;
+        } catch (error) {
+            return [];
+        }
+    }
+
 }
 
 module.exports = Event;
